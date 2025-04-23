@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Win an iPhone 15</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #f3f3f3, #ffeaea);
+      text-align: center;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      border-radius: 12px;
+    }
+    .iphone-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #c0392b;
+    }
+    .countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e74c3c;
+      margin: 20px 0;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.imgur.com/Jc7LCvF.jpg" alt="iPhone 15" class="iphone-img">
+    <h1>Congratulations! You've Been Selected!</h1>
+    <p>Win a brand new <strong>iPhone 15</strong> just by completing a simple step!</p>
+    <div class="countdown" id="timer">05:00</div>
+    <a class="cta-btn" href="#" id="claimBtn">Click Here to Claim Your iPhone!</a>
+  </div>  <script>
+    // Countdown Timer
+    let time = 300;
+    const timer = document.getElementById("timer");
+    setInterval(() => {
+      if (time > 0) {
+        time--;
+        const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
+        timer.textContent = `${minutes}:${seconds}`;
+      }
+    }, 1000);
+
+    // Link to your CPA offer
+    document.getElementById("claimBtn").href = "https://your-cpa-offer-link.com";
+  </script></body>
+</html>
